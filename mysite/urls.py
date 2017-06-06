@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     # default to the forum app
-    url(r'^forms/', include('forum.urls')),
+    url(r'^forum/', include('forum.urls')),
+    url('^', include('forum.urls')),
+    url('^', include('django.contrib.auth.urls')),
     url(r'^admin/', admin.site.urls),
 ]
