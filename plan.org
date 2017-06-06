@@ -50,3 +50,9 @@ This will be required to make sure rules are followed for different features, su
 ** Question:
 - How are votes redistributed then?
 
+
+** Database optimisation
+#+BEGIN_SRC python
+# if you are going to access related data
+users = User.objects.all().select_related('profile')
+#+END_SRC
