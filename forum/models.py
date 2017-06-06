@@ -20,6 +20,11 @@ class Citizen(models.Model):
     def save_user_citizen(sender, instance, **kwargs):
         instance.citizen.save()
 
+    def __str__(self):
+        return self.user.username
+
+
+
 
 class Issue(models.Model):
     author = models.ForeignKey(Citizen)

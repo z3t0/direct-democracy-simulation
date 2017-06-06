@@ -7,6 +7,15 @@
 <h2>Direct Democracy</h2>
 </div>
 
+<div id="createIssue">
+    <form action="{% url 'forum:index' %}" method="post">
+	{% csrf_token %}
+	<label for="new_issue">Issue Title: </label>
+	<input id="new_issue" type="text" name="new_issue_title" value="Title...">
+	<input type="submit" value="OK" />
+    </form>
+</div>
+
 <div id="navigation">
 </div>
 
