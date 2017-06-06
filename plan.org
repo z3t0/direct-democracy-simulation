@@ -1,0 +1,36 @@
+* Direct Democracy 
+** Objectives
+- Simple interface
+- Simple rules
+- Encourages conversation
+- Discourages baggage
+  
+** Principles
+- A citizen is ... well a first class citizen
+- A vote is a transferrable token
+- A simple economy exists to add realism
+- Every single component, even meta, is subject to change
+  
+** Initial Release
+*** How will voting work?
+A /Vote/ is the most fundamental resource of any citizen. It acts as a transferrable token which is used to achieve his or her end goals.
+
+The following are some things that a /Vote/ may be used for:
+- passing issues
+- failing issues
+- transferring to other citizens. This is a very powerful action which enables representation to occur.
+
+*** What is an issue?
+An issue can be thought of as a thread on a regular forum, it is a place with a specific focus that enables discussion.
+
+*** Tags
+Tags will enable Issues to be categorised in terms of what actions they can consume, several tags may be added to a single issue.
+
+**** Supported Tags
+- Repeal: Vote to remove a previously passed bill from /The Constitution/
+- Bill: A proposal to add a law to the constitution
+- Poll: A survey that allows an issue to be discussed without being passed into law; Half as many votes are consumed
+- Meta: Used to discuss the simulation itself
+
+** Auto moderation scripts
+This will be required to make sure rules are followed for different features, such as not allowing posts to contain any contact information.
