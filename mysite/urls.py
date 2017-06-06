@@ -18,6 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     # default to the forum app
-    url(r'^$', include('forum.urls')),
+    url(r'^forms/', include('forum.urls')),
     url(r'^admin/', admin.site.urls),
 ]

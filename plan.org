@@ -37,6 +37,7 @@ This will be required to make sure rules are followed for different features, su
 ** Database
 *** Citizen
 - Votes : Integer
+- Name: String
 *** Issue
 - Author : Citizen
 - Votes : Integer
