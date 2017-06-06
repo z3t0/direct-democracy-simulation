@@ -1,0 +1,19 @@
+{% load static %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'forum/style.css' %}"  />
+
+<div id="header">
+<h2>Direct Democracy</h2>
+</div>
+
+<div id="navigation">
+</div>
+
+<div id="content">
+    <div id="issues">
+	{% for issue in latest_issues_list %}
+	<li><a href="{% url 'forum:issue' issue.id %}">{{ issue.description }}</a></li>
+	{% endfor %}
+    </div>
+</div>

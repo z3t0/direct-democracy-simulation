@@ -1,0 +1,13 @@
+<% load static %>
+
+<div id="navigation">
+</div>
+
+<div id="content">
+    <div id="issues">
+	{% for issue in latest_issues_list_set.all %}
+	<li>{{ issue.description }}</li>
+	{% endfor %}
+    </div>
+</div>
+<h2>Index</h2>

@@ -2,10 +2,11 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.utils import timezone
 
 
 class Citizen(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
     bio = models.TextField(max_length=500, blank=True)
     votes = models.IntegerField(default=0)
     name = models.CharField(max_length=20)
@@ -25,3 +26,14 @@ class Issue(models.Model):
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=1000)
     votes = models.IntegerField(default=0)
+    created_date = models.DateField(default=timezone.now)
+
+
+class Comment(models.Model):
+    issue = models.ForeignKey(Issue, related_name='comments')
+    author = models.ForeignKey(Citizen)
+    text = models.CharField(max_length=1000)
+    created_date = models.DateField(default=timezone.now)
+
+    def __str__(self):
+        return self.text
