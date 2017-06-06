@@ -1,0 +1,16 @@
+
+{% block title %}Login{% endblock %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"  />
+
+{% block content %}
+  <div id="content">
+  <h2>Login</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+  </form>
+  </div>
+{% endblock %}
