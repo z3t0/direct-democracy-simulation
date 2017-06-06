@@ -34,3 +34,18 @@ Tags will enable Issues to be categorised in terms of what actions they can cons
 
 ** Auto moderation scripts
 This will be required to make sure rules are followed for different features, such as not allowing posts to contain any contact information.
+** Database
+*** Citizen
+- Votes : Integer
+*** Issue
+- Author : Citizen
+- Votes : Integer
+- Tag : Tag
+  
+*** Comment:
+- Author : Citizen
+- Votes : Integer
+
+** Question:
+- How are votes redistributed then?
+
