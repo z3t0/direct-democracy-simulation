@@ -2,12 +2,12 @@
 
 <p>{{ issue.description }}</p>
 
-{% for comment in issue.comments.all %}
-<div class="comment">
-    <div class="date">{{ comment.created_date }}</div>
-    <strong>{{ comment.author.user}}</strong>
-    <p>{{ comment.text|linebreaks }}</p>
-</div>
-{% empty %}
-<p>No comments here yet :(</p>
-{% endfor %}
+<!-- {% for comment in issue.comments.all %}
+     <div class="comment">
+     <div class="date">{{ comment.created_date }}</div>
+     <strong>{{ comment.author.user}}</strong>
+     <p>{{ comment.text|linebreaks }}</p>
+     </div>
+     {% empty %}
+     <p>No comments here yet :(</p>
+     {% endfor %} -->
