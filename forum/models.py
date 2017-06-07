@@ -29,7 +29,7 @@ class Citizen(models.Model):
 class Issue(models.Model):
     author = models.ForeignKey(Citizen)
     title = models.CharField(max_length=100)
-   description = models.CharField(max_length=1000)
+    description = models.CharField(max_length=1000)
     votes = models.IntegerField(default=0)
     created_date = models.DateField(default=timezone.now)
 
