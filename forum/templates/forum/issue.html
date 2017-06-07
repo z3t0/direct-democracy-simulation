@@ -1,4 +1,9 @@
 {% load comments %}
+{% load comments_xtd %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'bootstrap.min.css' %}" type="text/css" media="screen" />
+
 
 <h1>{{ issue.title }}</h1
 
@@ -11,9 +16,10 @@
     {{ comment_count }} comments have been posted.
 
     {% if comment_count %}
-    <div class="comments">
-	{% render_comment_list for issue %}
-    </div>
+
+    <ul class="media-list">
+	{% render_xtdcomment_tree for issue %}
+    </ul>
     {% endif %}
 
 </div>
