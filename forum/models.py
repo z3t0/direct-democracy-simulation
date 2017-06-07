@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
+from django.db.models import permalink
 from django.dispatch import receiver
 from django.utils import timezone
 
@@ -32,4 +33,8 @@ class Issue(models.Model):
     description = models.CharField(max_length=1000)
     votes = models.IntegerField(default=0)
     created_date = models.DateField(default=timezone.now)
+    allow_comments = models.BooleanField('allow comments', default=True)
 
+    def get_absolute_url(self):
+        from django.urls import reverse
+        return reverse('forum:issue', kwargs={'issue_id': self.id})

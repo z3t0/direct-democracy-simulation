@@ -1,13 +1,28 @@
+{% load comments %}
+
 <h1>{{ issue.title }}</h1
 
 <p>{{ issue.description }}</p>
 
-<!-- {% for comment in issue.comments.all %}
-     <div class="comment">
-     <div class="date">{{ comment.created_date }}</div>
-     <strong>{{ comment.author.user}}</strong>
-     <p>{{ comment.text|linebreaks }}</p>
-     </div>
-     {% empty %}
-     <p>No comments here yet :(</p>
-     {% endfor %} -->
+{% get_comment_count for issue as comment_count %}
+<div class="text-center" style="padding-top:20px">
+    <a href="{% url 'forum:index' %}">Back to the post list</a>
+    &nbsp;&sdot;&nbsp;
+    {{ comment_count }} comments have been posted.
+
+    {% if comment_count %}
+    <div class="comments">
+	{% render_comment_list for issue %}
+    </div>
+    {% endif %}
+
+</div>
+
+{% if issue.allow_comments %}
+<div class="comment">
+    <h4 class="text-center">Your comment</h4>
+    <div class="well">
+	{% render_comment_form for issue %}
+    </div>
+</div>
+{% endif %}

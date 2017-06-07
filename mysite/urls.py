@@ -20,6 +20,7 @@ urlpatterns = [
     # default to the forum app
     url(r'^forum/', include('forum.urls')),
     url('^', include('forum.urls')),
+    url(r'^comments/', include('django_comments_xtd.urls')),
     url('^', include('django.contrib.auth.urls')),
     url(r'^admin/', admin.site.urls),
 ]
