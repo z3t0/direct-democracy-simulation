@@ -9,9 +9,7 @@
 </div>
 
 <div id="createIssue">
-    <form action="{% url 'forum:newIssue' %}" >
-	<input type="submit" value="Create Issue" />
-    </form>
+  <input type="button" value="Create a new Issue" />
 </div>
 
 <div id="navigation">

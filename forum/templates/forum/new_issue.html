@@ -1,0 +1,21 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'forum/new_issue.css' %}" type="text/css" media="screen" />
+
+<div class="new-issue" >
+    <form action="{% url 'forum:newIssue' %}" method="post" >
+	{% csrf_token %}
+
+	<div class="title" >
+	    <label for="{{ form.id_title }}">Title</label>
+	    <textarea name="title" rows="2" cols="50" maxlength="100" class="user-input"></textarea>
+	</div>
+
+	<div class="description" >
+	    <label for="{{ form.id_description}}">Description</label>
+	    <textarea name="description" rows="20" cols="50" maxlength="1000" class="user-input"></textarea>
+	</div>
+
+	<input class="btnSubmit" type="submit" value="Submit" />
+    </form>
+</div>

@@ -1,0 +1,35 @@
+html, body {
+    background-color: FFF9AA;
+}
+
+.new-issue {
+    /* Center on page */
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+
+    text-align: center;
+}
+
+div {
+    padding: 10px;
+}
+
+input, label {
+    /* Label above input */
+    display: inline-block;
+    padding: 15px;
+}
+
+.user-input  {
+    display: inline-block;
+}
+
+label {
+    display: block;
+    font-size: 30;
+}
+
+.btnSubmit {
+    font-size: 30;
+}
